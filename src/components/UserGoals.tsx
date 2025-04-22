@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { target } from 'lucide-react';
+import { Target } from 'lucide-react';
 
 interface UserGoalsProps {
   onSubmit: (goals: UserGoalsData) => void;
@@ -29,7 +29,7 @@ const UserGoals = ({ onSubmit }: UserGoalsProps) => {
   return (
     <div className="p-6 bg-white rounded-lg shadow-lg dark:bg-gray-800">
       <div className="flex items-center gap-2 mb-6">
-        <target className="w-6 h-6 text-activeaid-primary" />
+        <Target className="w-6 h-6 text-activeaid-primary" />
         <h2 className="text-2xl font-bold text-activeaid-primary">Your Goals</h2>
       </div>
 
