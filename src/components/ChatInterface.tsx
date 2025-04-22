@@ -71,7 +71,7 @@ const ChatInterface: React.FC = () => {
     } else if (lowerQuery.includes('stress') || lowerQuery.includes('anxiety') || lowerQuery.includes('mental health')) {
       return 'Managing stress is important for your wellbeing. Consider practices like mindfulness, deep breathing, regular physical activity, and connecting with others. Would you like to learn some relaxation techniques?';
     } else {
-      return 'I'm here to help with any topic you're interested in! Feel free to ask about health, fitness, nutrition, mental wellbeing, or anything else you'd like to discuss.';
+      return 'I\'m here to help with any topic you\'re interested in! Feel free to ask about health, fitness, nutrition, mental wellbeing, or anything else you\'d like to discuss.';
     }
   };
 
