@@ -6,13 +6,12 @@ import ExerciseRecommendations from './components/ExerciseRecommendations';
 import Settings from './components/Settings';
 import ChatInterface from './components/ChatInterface';
 
+// Update UserGoalsData interface to match the one in UserGoals.tsx
 interface UserGoalsData {
-  age: string;
-  sex: string;
-  goalType: string;
-  targetWeight: string;
-  currentWeight: string;
-  height: string;
+  age: number;
+  sex: 'male' | 'female' | 'other';
+  targetWeight: number;
+  weightGoal: 'lose' | 'maintain' | 'gain';
 }
 
 const App: React.FC = () => {
@@ -22,6 +21,13 @@ const App: React.FC = () => {
   const handleGoalsSubmit = (goals: UserGoalsData) => {
     setUserGoals(goals);
     setActiveTab('assistant'); // Switch to assistant tab after submitting goals
+  };
+
+  // Calculate BMI when needed (for ExerciseRecommendations)
+  const calculateBMI = () => {
+    // Default to a normal BMI if no data available
+    // In a real app, you would calculate this from height and weight
+    return 22; // Example normal BMI value
   };
 
   return (
@@ -89,7 +95,7 @@ const App: React.FC = () => {
             )}
 
             {activeTab === 'exercise' && userGoals && (
-              <ExerciseRecommendations bmiCategory="normal" goal={userGoals.goalType} />
+              <ExerciseRecommendations bmi={calculateBMI()} />
             )}
 
             {activeTab === 'assistant' && (
