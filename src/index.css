@@ -1,0 +1,37 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --aquamarine-50: #E0FFFF;   /* Lightest aquamarine */
+  --aquamarine-100: #76EEC6;  /* Light aquamarine */
+  --aquamarine-200: #40E0D0;  /* Classic aquamarine */
+  --aquamarine-300: #48D1CC;  /* Medium turquoise */
+  --aquamarine-400: #20B2AA;  /* Dark aquamarine */
+  --aquamarine-500: #008B8B;  /* Darker teal */
+}
+
+/* Light mode color scheme */
+.light {
+  --background: var(--aquamarine-50);
+  --foreground: var(--aquamarine-500);
+  --primary: var(--aquamarine-200);
+  --primary-foreground: white;
+  --secondary: var(--aquamarine-100);
+  --secondary-foreground: var(--aquamarine-500);
+}
+
+/* Dark mode color scheme */
+.dark {
+  --background: var(--aquamarine-500);
+  --foreground: var(--aquamarine-50);
+  --primary: var(--aquamarine-400);
+  --primary-foreground: white;
+  --secondary: var(--aquamarine-300);
+  --secondary-foreground: white;
+}
+
+body {
+  @apply bg-background text-foreground;
+}
